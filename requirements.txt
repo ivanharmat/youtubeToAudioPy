@@ -8,7 +8,8 @@ moviepy==1.0.1
 numpy==1.18.1
 Pillow==7.0.0
 proglog==0.1.9
-pytube==9.5.3
+pytube3==9.6.4
 requests==2.22.0
 tqdm==4.41.1
+typing-extensions==3.7.4.2
 urllib3==1.25.7
