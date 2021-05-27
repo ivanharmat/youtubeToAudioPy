@@ -1,5 +1,5 @@
 # youtubeToAudioPy
-# Python script to download any youtube video and convert it to mp3
+# Python script to download any youtube video or any directly accessible video and convert it to mp3
 
 Requirements : 
 
@@ -15,4 +15,7 @@ $ pip install -r requirements.txt
 # Usage
 ```sh
 $ python youtubeToAudio.py youtube_id
+```
+```sh
+$ python directVideoToAudio.py video_url [optional_name]
 ```
