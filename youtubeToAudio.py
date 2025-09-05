@@ -7,25 +7,25 @@ import moviepy.editor as mp
 def main():
 
 	if len(sys.argv) > 1 :
-		youtubeFile = "https://www.youtube.com/watch?v="+str(sys.argv[1])
-		youtubeVideo = YouTube(youtubeFile)
+		youtube_file = "https://www.youtube.com/watch?v="+str(sys.argv[1])
+		youtube_video = YouTube(youtube_file)
 
-		print("Downloading "+youtubeVideo.title)
+		print("Downloading "+youtube_video.title)
 
-		downloadableStreams = youtubeVideo.streams
+		downloadable_streams = youtube_video.streams
 
-		downloadableStreams.first().download("files/")
+		downloadable_streams.first().download("files/")
 
-		os.rename("files/"+downloadableStreams.first().default_filename, "files/"+youtubeVideo.title+".mp4")
+		os.rename("files/"+downloadable_streams.first().default_filename, "files/"+youtube_video.title+".mp4")
 
 		print("Video downloaded!")
 		print("Now converting to mp3 ...")
 
-		clip = mp.VideoFileClip("files/"+youtubeVideo.title+".mp4")
-		clip.audio.write_audiofile("files/"+youtubeVideo.title+".mp3")
+		clip = mp.VideoFileClip("files/"+youtube_video.title+".mp4")
+		clip.audio.write_audiofile("files/"+youtube_video.title+".mp3")
 
 		# delete the video file - not needed anymore
-		os.remove("files/"+youtubeVideo.title+".mp4")
+		os.remove("files/"+youtube_video.title+".mp4")
 
 		print("Converting to mp3 done!")
 
@@ -35,4 +35,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+	main()
